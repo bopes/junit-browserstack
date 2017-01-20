@@ -118,6 +118,7 @@
                             </includes>
                             <systemPropertyVariables>
                                 <config>parallel.conf.json</config>
+                                <threadCount>25</threadCount>
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>

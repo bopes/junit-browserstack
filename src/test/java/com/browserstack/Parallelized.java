@@ -10,10 +10,10 @@ import org.junit.runners.model.RunnerScheduler;
 public class Parallelized extends Parameterized {
 
   private static class ThreadPoolScheduler implements RunnerScheduler {
-    private ExecutorService executor; 
+    private ExecutorService executor;
 
     public ThreadPoolScheduler() {
-      String threads = System.getProperty("junit.parallel.threads", "25");
+      String threads = System.getProperty("threadCount", "25");
       int numThreads = Integer.parseInt(threads);
       executor = Executors.newFixedThreadPool(numThreads);
     }
